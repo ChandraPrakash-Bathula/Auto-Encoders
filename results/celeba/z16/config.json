@@ -1,0 +1,63 @@
+{
+  "model_type": "ae",
+  "dataset": "celeba",
+  "run": "z16",
+  "model_config": {
+    "image_size": 64,
+    "in_channels": 3,
+    "latent_dim": 16,
+    "base_channels": 32,
+    "channel_mults": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "beta": null,
+  "best_epoch": 39,
+  "training": {
+    "epochs": 50,
+    "batch_size": 64,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "patience": 10,
+    "augment": true,
+    "aug_flip_p": 0.5,
+    "aug_rotate_deg": 0.0,
+    "aug_scale": 0.0,
+    "aug_translate": 0.0,
+    "aug_gamma": 1.0,
+    "seed": 42
+  },
+  "test_metrics": {
+    "model": "ae",
+    "run_name": "z16",
+    "latent_dim": 16,
+    "beta": null,
+    "split": "test",
+    "checkpoint": "best.pt",
+    "epoch": 39,
+    "n_images": 19962,
+    "n_subjects": 1000,
+    "n_params": 11864595,
+    "mse_mean": 0.013629904016852379,
+    "mse_std": 0.006957364268600941,
+    "masked_mse_mean": 0.013911668211221695,
+    "masked_mse_std": 0.007086687255650759,
+    "psnr_mean": 19.136537551879883,
+    "psnr_std": 2.0249834060668945,
+    "masked_psnr_mean": 19.030010223388672,
+    "masked_psnr_std": 1.9775538444519043,
+    "ssim_mean": 0.605037271976471,
+    "ssim_std": 0.09545886516571045,
+    "fid_n": 10000,
+    "fid_real_floor": 3.00667605218581,
+    "fid_recon": 86.08660119032575,
+    "diversity_real": 0.800689160823822,
+    "fid_gauss": 89.1986810347723,
+    "diversity_gauss": 0.6350932121276855
+  }
+}
